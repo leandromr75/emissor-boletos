@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB4EC3B6-C4AE-48B9-A514-7DE005C85143}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>novo_zenite</RootNamespace>
+    <AssemblyName>AMBRA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReportLeitura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLeitura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportRecibo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportRecibo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportRelatorio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportRelatorio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL.cs" />
+    <Compile Include="Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data.Designer.cs">
+      <DependentUpon>Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntrarMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntrarMes.Designer.cs">
+      <DependentUpon>EntrarMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hello.Designer.cs">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leitura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leitura.Designer.cs">
+      <DependentUpon>Leitura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaAtraso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaAtraso.Designer.cs">
+      <DependentUpon>ListaAtraso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="printDGV.cs" />
+    <Compile Include="PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintOptions.Designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurar.Designer.cs">
+      <DependentUpon>Procurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rateio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rateio.Designer.cs">
+      <DependentUpon>Rateio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Texto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Texto.Designer.cs">
+      <DependentUpon>Texto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizaRateio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizaRateio.Designer.cs">
+      <DependentUpon>VisualizaRateio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportLeitura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLeitura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportRecibo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportRecibo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportRelatorio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportRelatorio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntrarMes.resx">
+      <DependentUpon>EntrarMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hello.resx">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leitura.resx">
+      <DependentUpon>Leitura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaAtraso.resx">
+      <DependentUpon>ListaAtraso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurar.resx">
+      <DependentUpon>Procurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rateio.resx">
+      <DependentUpon>Rateio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Texto.resx">
+      <DependentUpon>Texto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizaRateio.resx">
+      <DependentUpon>VisualizaRateio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_45.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_44.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey_new_seo-05-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servidor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roteador.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rot2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soft.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diversos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20170202_080242.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar51.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone_torneiras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate-tables-icon20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate-tables-icon40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-Add-icon40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-Add-icon20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orcamento40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orcamento20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relat40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_agua40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-2014-09-25-nossa-água40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-resume1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17654.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1765.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\176541.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\176543.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animat-search-color.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy_indicator.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_agua20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\div.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procura1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinheiro22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinheiro19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_calendar_animation3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recibo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recibo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReciboFinal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recibo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1493237806_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gomme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12pulsos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cad1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cad2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venci.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consum.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deve.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rec.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conf.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
